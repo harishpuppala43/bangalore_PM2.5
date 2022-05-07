@@ -391,7 +391,7 @@
                 console.log(jsnlyrsensorss);
                 jsnInterTemp = turf.interpolate(jsnlyrsensorss,0.5,{gridType:'hex',property:'Temperature', units:'kilometers'}); 
                 lyrInterTemp = L.geoJSON(jsnInterTemp, {style:styleTemp,onEachFeature:processGridT}).addTo(mymap);
-                lyrMask = L.geoJSON.ajax('data/Maskk.geojson', {style:styleMask}).addTo(mymap);
+                lyrMask = L.geoJSON.ajax('data/Mask.geojson', {style:styleMask}).addTo(mymap);
                 $("#legend1").hide();
                 $("#legend2").show();
                 $("#legend3").hide();
@@ -447,7 +447,7 @@
                 console.log(jsnlyrsensorss);
                 jsnInterHumd = turf.interpolate(jsnlyrsensorss,0.5,{gridType:'hex',property:'Humidity', units:'kilometers'}); 
                 lyrInterHumd = L.geoJSON(jsnInterHumd, {style:styleHumd,onEachFeature:processGridH}).addTo(mymap);
-                lyrMask = L.geoJSON.ajax('data/Maskk.geojson', {style:styleMask}).addTo(mymap);
+                lyrMask = L.geoJSON.ajax('data/Mask.geojson', {style:styleMask}).addTo(mymap);
                 $("#legend1").hide();
                 $("#legend2").hide();
                 $("#legend3").show();
